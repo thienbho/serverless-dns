@@ -377,6 +377,11 @@ export function isAnswerQuad0(packet) {
   return isAnswerBlocked(packet.answers);
 }
 
+export function ttl(packet) {
+  if (!hasAnswers(packet)) return 0;
+  return packet.answers[0].ttl || 0;
+}
+
 /**
  * @param {any} dnsPacket
  * @returns {string[]}
@@ -421,7 +426,7 @@ export function extractDomains(dnsPacket) {
 
 export function getInterestingAnswerData(packet, maxlen = 80, delim = "|") {
   if (!hasAnswers(packet)) {
-    return !util.emptyObj(packet) ? packet.rcode || "WTF" : "WTF";
+    return !util.emptyObj(packet) ? packet.rcode || "WTF1" : "WTF2";
   }
 
   // set to true if at least one ip has been captured from ans
