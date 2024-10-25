@@ -1,4 +1,4 @@
-name = "serverless-dns"
+name = "dns"
 main = "./dist/worker.js"
 workers_dev = true
 # logpush job is setup to capture from envs ending: log, pro, or one
@@ -40,11 +40,7 @@ CLOUD_PLATFORM = "cloudflare"
 name = "basic-unbound"
 minify = true
 routes = [
-  "sky.rethinkdns.com/*",
-  "sky.bravedns.com/*",
-  "basic.rethinkdns.com/*",
-  "basic.bravedns.com/*",
-  "free.bravedns.com/*",
+  "dns.ond.workers.dev/*",
 ]
 # vars are not inherited
 # workers/platform/environment-variables#environment-variables-via-wrangler
@@ -68,6 +64,8 @@ analytics_engine_datasets = [
     { binding = "METRICS", dataset = "ONE_M0" },
     { binding = "BL_METRICS", dataset = "ONE_BL0" }
 ]
+[placement]     
+mode = "smart"
 
 [env.one.vars]
 # just the error and request logs
