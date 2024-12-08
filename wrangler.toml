@@ -41,6 +41,7 @@ name = "basic-unbound"
 minify = true
 routes = [
   "dns.ond.workers.dev/*",
+  "ddns.ond.workers.dev/*",
   "cloudflare-docs-eyt.pages.dev/*",
 ]
 # vars are not inherited
