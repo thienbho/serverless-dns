@@ -29,7 +29,7 @@ jobs:
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "tpdm"
+          project: "dohdl"
           entrypoint: "src/server-deno.ts"
           root: ""
           
