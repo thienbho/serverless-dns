@@ -31,4 +31,6 @@ jobs:
         with:
           project: "bhdns"
           entrypoint: "src/server-deno.ts"
-          root: "
+          root: ""
+          
+          
