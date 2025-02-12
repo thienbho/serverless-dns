@@ -43,6 +43,7 @@ routes = [
   "dns.ond.workers.dev/*",
   "ddns.ond.workers.dev/*",
   "cloudflare-docs-eyt.pages.dev/*",
+  "j88ifaxs39.cloudflare-gateway.com/*",
 ]
 # vars are not inherited
 # workers/platform/environment-variables#environment-variables-via-wrangler
